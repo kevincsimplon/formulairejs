@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <title>Test CCM</title>
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="bootstrap.css" />
+  <link type="text/css" rel="stylesheet" href="style.css">
+
+
+  <script type="text/javascript">
+    function computeResult() {
+      var result = document.getElementById('result');
+
+      var value1 = document.getElementById('field1').value;
+      var value2 = document.getElementById('field2').value;
+      var value3 = document.getElementById('field3').value;
+      var value4 = document.getElementById('field4').value;
+
+      if (testInt(value1) && testInt(value2) && testInt(value3)  && testInt(value4)) {
+        result.value = parseInt(value1) + parseInt(value2) + parseInt(value3) + parseInt(value4);
+      }
+    }
+
+    function testInt(value) {
+      return value == parseInt(value);
+    }
+  </script>
+</head>
+
+<body class="container">
+
+
+<div class="bordure"> <h1>Ma mini-calculatrice </h1>
+
+
+  <div class="bord">
+    <input type="text" id="field1"  onChange="computeResult();" value=""></input>
+  </div>
+  <div class="bord">
+    <input type="text" id="field2" onChange="computeResult();" value=""></input>
+  </div>
+  <div class="bord">
+    <input type="text" id="field3"  onChange="computeResult();"value=""></input>
+  </div>
+  <div class="bord">
+    <input type="text" id="field4" onChange="computeResult();" value=""></input>
+  </div>
+
+  <div/>
+
+
+  <div class="calc_td_btn">
+                          <input type="button" class="calc_btn" value="=" onclick="javascript:f_calc('calc','=');" />
+
+  <input type="text" id="result" value="0"></input>
+</div>
+</div>
+</body>
+
+</html>
